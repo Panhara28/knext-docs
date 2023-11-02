@@ -1,0 +1,123 @@
+## 🎓​ ជំពូកទី១
+
+### កិច្ចចាប់ផ្តើម
+
+#### បង្កើតនូវ Project ថ្មី
+
+ដើម្បីបង្កើត NextJS App អ្នកត្រូវបើក Terminal របស់អ្នកដែលនៅក្នុង Folder Computer របស់អ្នកចង់ផ្ទុកវា ហើយធ្វើការដំណើរការទៅតាមពាក្យបញ្ជាខាងក្រោម៖
+
+```shell
+npx create-next-app@latest nextjs-dashboard --use-npm --example "https://github.com/vercel/next-learn/tree/main/dashboard/starter-example"
+
+```
+
+ពាក្យបញ្ជាខាងលើប្រើប្រាសនូវ `create-next-app` និង Command Line Interface (CLI) គឺជា Tools សម្រាប់រៀបចំឲ្យស្រាប់ក្នុង NextJS Application។ ពាក្យបញ្ជាខាងលើអ្នកក៏ត្រូវប្រើ`--example` flag ដើម្បី `starter example` សម្រាប់វគ្គសិក្សាមួយនេះ។
+
+#### ស្វែងយល់ពី Project មួយនេះ
+
+ការបង្រៀនសរសេរកូដឆៅនៅក្នុងវគ្គសិក្សាផ្សេង គឺធ្វើឲ្យអ្នកសរសេរកូដច្រើន និងពិបាករៀនតែវគ្គនេះពួកយើងសរសេរឲ្យអ្នកទាំងអស់គ្នារួចរាល់ហើយ។ វាមានផលល្អសម្រាប់អ្នកនៅពេលដែលអ្នកធ្វើការជាមួយនឹង Project ដែលមានស្រាប់នៅក្នុងពិភពលោកពិត (Real-World Development)
+
+គោលបំណងរបស់ពួកយើងគឺជួយអ្នកក្នុងការផ្តោតសំខាន់លើ មុខងារសំខាន់ៗរបស់ NextJS និងមិនចាំបាច់សរសេរកូដទាំងអស់នេះទេ។
+
+ដូច្នេាះបន្ទាប់ពីការតម្លើង Project រួចរាល់ហើយអ្នកទាំងអស់គ្នាអាចចូលទៅកាន់ Project របស់អ្នកបានដោយធ្វើតាម Command ខាងក្រោម៖
+
+```shell
+cd nextjs-dashboard
+```
+
+សូមចំនាយពេលរបស់អ្នកយល់ពី Project។
+
+#### រចនាសម្ព័ព្ធនៃ Folder
+
+អ្នកនឹងត្រូវឃើញរចនាសម្ព័ព្ធនៃ Project ដូចរូបខាងក្រោម៖
+
+![Dashboard!](/learn-folder-structure.avif "Learn folder structure")
+
+- **/app**: ផ្ទុកទៅដោយ Routes ទាំងអស់, Component, និង Logic របស់ Application, មានន័យថាគឺជាកន្លែងដែលអ្នកត្រូវធ្វើការច្រើននៅក្នុង Folder **/app** មួយនេះ
+- **/app/lib**: ផ្ទុកនូវ Functions ប្រើប្រាស់សម្រាប់ Application ដូចជា reusable utility function និង​ data fetching Functions
+- **/app/ui**: ផ្ទុកនូវ UI Component សម្រាប់ Application ទាំងអស់ ដូចជា Card, Tables, និង Forms។ ដើម្បីសន្សំពេលវេលា ពួកយើងបានសរសេរ Style សម្រាប់ Component រួចអស់ហើយ
+- **/public**: ផ្ទុកនូវ static assets មួយចំនួនដូចជា រូបភាព
+- **/scripts**: ផ្ទុកនូវ File ដែលចាំបាច់ក្នុងការរៀបចំ Database និងរៀបចំតម្លើងនៅក្នុងជំពូកបន្ទាប់
+- **Config files**: អ្នកក៏ត្រូវស្គាល់នូវ Config files ដូចជា៖ `nextjs.config.js` នៅមាននៅក្នុង Root នៃ folder project របស់អ្នក។ Files ទាំងអស់នេះគឺបង្កើតឡើងសម្រាប់
+  pre-configured នៅពេលដែលអ្នកចាប់ផ្តើម Project ថ្មី ដែលប្រើប្រាស់នូវ `create-next-app` ប៉ុន្តែអ្នកមិនចាំបាច់ខ្វល់ខ្វាយច្រើនទាក់ទងនឹងការ Configured ក្នុងវគ្គសិក្សារនេះនេាះទេ។
+
+🕹 អ្នកអាចចំនាយពេលមើលនូវ folder structure បាន, តែកុំបារម្ភទាក់ទងនឹង folder structure និងcode ច្រើនពេកបើសិនជាអ្នកមិនយល់ត្រង់កន្លែងណាមួយ
+
+#### ទិន្នន័យក្លែងក្លាយ
+
+នៅពេលដែលអ្នកបង្កើត user interfaces, អ្នកត្រូវមានទិន្នន័យក្លែងក្លាយមួយចំនួនសម្រាប់ប្រើប្រាស់ក្នុងករណី Database ឬ API មិនទាន់មាននៅក្នុង application អ្នកអាច៖
+
+- ប្រើទិន្នន័យក្លែងក្លាយជាទំរង់ JSON ឬ JavaScript Object
+- ប្រើ 3rd party service ដូចជា mockAPI
+
+សម្រាប់ Project នេះយើងមានផ្តល់នូវទិន្នន័យក្លែងក្លាយ (Placeholde Data) នៅក្នុង file នេះ `app/lib/placeholder-data.js`។ Javascript object នីមួយៗដែលនៅក្នុង file គឺបញ្ជាក់ពី table នៅក្នុង database
+ឧទាហរណ៍ សម្រាប់តារាង Invoices
+
+```javascript
+const invoices = [
+  {
+    customer_id: customers[0].id,
+    amount: 15795,
+    status: "pending",
+    date: "2022-12-06",
+  },
+  {
+    customer_id: customers[1].id,
+    amount: 20348,
+    status: "pending",
+    date: "2022-11-14",
+  },
+  // ...
+];
+```
+
+នៅក្នុងជំពូកបន្ទាប់ក្នុងការរៀបចំ Database អ្នកនឹងត្រូវប្រើប្រាស់ទិន្នន័យដើម្បីមានទិន្នន័យសម្រាប់ (seed) Database
+
+#### ភាសា TypeScript
+
+អ្នកក៏ត្រូវស្គាល់ និងប្រើប្រាស់ភាសា typescript ដែលមាន extension `.ts` ឬ `.tsx` ក៏ដោយសារតែ Project របស់យើងសរសេរដោយប្រើប្រាស់ typescript។
+
+វាមិនជាអ្វីទេដែលអ្នកមិនចេះ typescript យើងនឹងផ្តល់ TypeScript Code Snippet នៅពេលដែលចាំបាច់។
+
+អីលូវអ្នកអាចមើលលើ Folder៖ `/app/lib/definitions.ts` file ។ យើងបានកំណត់ types សម្រាប់អ្នករួចហើយដោយវា returned ពី database ដូចឧទារហណ៍ខាងក្រោម៖
+
+```javascript
+export type Invoice = {
+  id: string,
+  customer_id: string,
+  amount: number,
+  date: string,
+  // In TypeScript, this is called a string union type.
+  // It means that the "status" property can only be one of the two strings: 'pending' or 'paid'.
+  status: "pending" | "paid",
+};
+```
+
+ដើម្បីប្រើប្រាស់ Typescript អ្នកត្រូវធានាឲ្យបានថាអ្នកមិនត្រូវ pass ទិន្នន័យខុសតម្រង់ទៅ Component ឬ Database ដូចជា pass `string` ទៅលើ amount នៃ `number`
+
+> **បើសិនជាអ្នកជា Typescript developer**
+>
+> - Nextjs ធ្វើការ detect បើសិនជាអ្នកប្រើប្រាស់ typescript និង automatically តម្លើង package ដែលចាំបាច់ និង configuration ឲ្យយើងតែម្តង។ Nextjs គឺមាន typescript plugin នៅក្នុង Project តែម្តង សម្រាប់ Code editor ដើម្បីជំនួយ auto-compeletion និង​ type-safty
+> - អ្នកក៏អាចប្រើប្រាស់ Prima សម្រាប់ Project ផងដែរ តែដោយសារពួកយើងគឺមាន types កំណត់សម្រាប់ហើយយើងប្រើ់ប្រាស់ types នេះតែម្តង
+
+#### ដំណើរការ Server ក្នុង Development
+
+ដំណើរការ `npm i` ដើម្បីតម្លើង project packages។
+
+```shell
+npm i
+```
+
+ហើយចាប់ផ្តើមដំណើរការតាម Command ខាងក្រោមដ់ើម្បីចាប់ផ្តើម Server
+
+```
+npm run dev
+```
+
+`npm run dev` គឺជា Command សម្រាប់ចាប់ផ្តើម development server នៅលើ port 3000. សូមឆែកមើល Terminal ឬ បើក `http://localhost:3000` នៅលើ brower។
+
+ដូច្នេាះ Home page របស់អ្នកគួរតែមានរូបរាងបែបនេះដូចរូបខាងក្រោម៖
+
+![Dashboard!](/acme-unstyled.avif "Acme unstyled")
+
+😁 ដោយសារតែយើងមិនបាន Style វាចឹងវាចេញរូបមិនសូវស្អាតចឹងហើយ!
